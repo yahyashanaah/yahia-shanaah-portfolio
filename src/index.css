@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 221 70% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 171 77% 64%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 171 77% 64%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 171 77% 64%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-navy-dark text-slate-light font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-white;
+  }
+  
+  section {
+    @apply py-20;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 md:px-8 mx-auto max-w-7xl;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-12 relative inline-block text-white;
+  }
+  
+  .section-heading::after {
+    content: "";
+    @apply block absolute -bottom-3 left-0 w-1/2 h-1 bg-accent;
+  }
+  
+  .nav-item {
+    @apply px-4 py-2 text-slate hover:text-accent transition-colors;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-transparent text-accent border border-accent rounded hover:bg-accent/10 transition-colors;
+  }
+  
+  .btn-outlined {
+    @apply px-6 py-3 bg-transparent text-accent border border-accent rounded hover:bg-accent/10 transition-colors;
+  }
+  
+  .skill-card {
+    @apply bg-navy p-6 rounded-md border border-navy-light hover:border-accent/30 transition-all;
+  }
+  
+  .project-card {
+    @apply bg-navy rounded-md overflow-hidden border border-navy-light hover:border-accent/30 transition-all;
+  }
+}
