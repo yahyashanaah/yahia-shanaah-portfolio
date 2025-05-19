@@ -18,9 +18,17 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
 }) => {
   return (
     <Card className="project-card overflow-hidden h-full flex flex-col bg-navy border border-navy-light">
-      {/* <div className="h-48 bg-navy-light flex items-center justify-center">
-        <span className="text-slate">Project Image Placeholder</span>
-      </div> */}
+      <div className="h-48 bg-navy-light flex items-center justify-center">
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="text-slate-500">Image not available</div>
+        )}
+      </div>
 
       <CardContent className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
@@ -40,10 +48,11 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
 
         <div className="flex gap-3 mt-auto">
           <Button
-            asChild
             variant="ghost"
-            className="text-slate hover:text-accent p-2 h-auto"
-            aria-label={`View ${project.title} on GitHub`}
+            className="text-slate-600 hover:text-accent"
+            onClick={() =>
+              window.open(project.githubUrl, "_blank", "noopener,noreferrer")
+            }
           >
             <a
               href={project.githubUrl}
@@ -52,8 +61,8 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
             >
               <Github size={20} />
             </a>
+            View on GitHub
           </Button>
-
           {project.demoUrl && (
             <Button
               asChild
@@ -91,6 +100,7 @@ const Projects: React.FC = () => {
         "AutoMapper",
         "API",
       ],
+      image: "/Dotnet.webp",
       githubUrl: "https://github.com/yahyashanaah/NZWalks-master",
     },
     {
@@ -106,6 +116,7 @@ const Projects: React.FC = () => {
         "CRUD",
         "middleware",
       ],
+      image: "/maxresdefault.jpg",
       githubUrl: "https://github.com/yahyashanaah/Manage",
     },
     {
@@ -125,6 +136,7 @@ const Projects: React.FC = () => {
         "gTTS",
         "Docker",
       ],
+      image: "/FastAPIandNextjs.png",
       githubUrl: "https://github.com/yahyashanaah/ExpensesTracker",
     },
     {
@@ -143,6 +155,7 @@ const Projects: React.FC = () => {
         "Repository pattern",
         "AutoMapper",
       ],
+      image: "/gymBooking.png",
       githubUrl: "https://github.com/yahyashanaah/GymBookingOnline",
     },
     {
@@ -150,6 +163,7 @@ const Projects: React.FC = () => {
       description:
         "Developed a feature-rich e-commerce application using Angular. Implemented components, services, routing, environment configs, directives, DI, lifecycle hooks, modules, pipes, lazy loading, and observables. Enhanced UX with a loading spinner.",
       tags: ["Angular", "TypeScript", "Git", "GitHub", "RxJS"],
+      image: "/Angular.jpg",
       githubUrl: "https://github.com/yahyashanaah/Market-Web-Angular",
     },
   ];
