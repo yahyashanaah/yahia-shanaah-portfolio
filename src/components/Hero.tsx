@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
           <a
             href="/Yayah-shanaah-cv.pdf"
             target="_blank"
-            download="Yahya_Shannash_Resume.pdf"
+            download="Yayah-Shanaah-Resume.pdf"
             className="text-slate hover:text-accent"
           >
             <svg
