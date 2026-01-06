@@ -1,59 +1,52 @@
-
 import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20">
-      <div className="container">
-        <h2 className="section-heading">About Me</h2>
+    <section
+      id="about"
+      className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"
+    >
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-slate mb-6">
-              I'm a Full-Stack Software Engineer based in Dubai with extensive
-              experience in building scalable, high-performance web
-              applications. My skill set spans a wide array of technologies,
-              including C#, ASP.NET Core, Node.js, Next.js, Angular, React.js,
-              Python (Django, FastAPI), and Azure. I am proficient in developing
-              both the backend and frontend to create seamless, efficient
-              systems.
-            </p>
+      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          About Me
+        </h2>
 
-            <p className="text-slate mb-6">
-              In addition to my full-stack development expertise, I have strong
-              experience in cloud technologies. I'm well-versed in using Docker,
-              Kubernetes, and implementing load balancing to ensure applications
-              are scalable, resilient, and efficient in production environments.
-              This enables me to build robust, cloud-native applications that
-              can handle high traffic with ease.
-            </p>
-
-            <p className="text-slate mb-6">
-              I'm also deeply interested in the intersection of AI and machine
-              learning, particularly in integrating Large Language Models (LLMs)
-              and AI-driven solutions into software applications. By leveraging
-              these technologies, I aim to accelerate development, enhance
-              automation, and create more intelligent, user-focused products.
-            </p>
-
-            <p className="text-slate">
-              I believe in the power of continuous learning and collaboration,
-              always striving to improve my skills while building innovative and
-              efficient solutions.
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <img
-              src="/DSC_48944.jpg"
-              alt="Yahia Shanaah"
-              className="rounded-full shadow-md w-64 h-64 object-cover"
-              loading="lazy"
-              width={300}
-              height={300}
-              style={{ maxWidth: "100%", height: "auto" }}  
-            />
-          </div>
+        {/* Text Content Only */}
+        <div className="space-y-6 text-slate-300 leading-relaxed">
+          <p>
+            I’m a Full-Stack Software Engineer based in Dubai, experienced in
+            building scalable, high-performance web applications across backend
+            and frontend systems. My core expertise includes .NET (C#, ASP.NET
+            Core) and modern JavaScript frameworks such as Angular, React,
+            Next.js, and Node.js, with additional experience using Python
+            (Django, FastAPI) for backend and AI-driven services.
+          </p>
+          <p>
+            I have strong hands-on experience with cloud-native development,
+            leveraging Azure, Docker, Kubernetes, and CI/CD pipelines to design
+            systems that are resilient, scalable, and production-ready. I focus
+            on clean architecture, performance optimization, and building
+            solutions that reliably scale under real-world workloads.
+          </p>
+          <p>
+            I’m particularly interested in AI and LLM-powered systems, with
+            experience integrating AI-driven features and RAG
+            (Retrieval-Augmented Generation) pipelines into applications to
+            enhance automation, personalization, and decision-making. I aim to
+            bridge solid software engineering with practical AI to deliver
+            intelligent, business-focused products.
+          </p>
+          <p>
+            I value continuous learning, clear communication, and collaboration,
+            and I enjoy turning complex requirements into efficient, maintainable
+            solutions that create real impact.
+          </p>
         </div>
       </div>
     </section>
