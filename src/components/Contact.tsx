@@ -86,12 +86,16 @@ const Contact: React.FC = () => {
 
   return (
     // Updated background to match the Carousel's gradient
-    <section id="contact" className="w-full py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
+    <section
+      id="contact"
+      className="relative py-24 text-white border-t border-slate-700/50"
+    >
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
         {/* Updated Heading style */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-white mb-4">Contact Me</h2>
-          <div className="w-24 h-1 bg-cyan-400 mx-auto rounded-full"></div>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Contact Me
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -110,7 +114,11 @@ const Contact: React.FC = () => {
                   key={index}
                   href={item.link}
                   target={item.title === "Location" ? "_blank" : undefined}
-                  rel={item.title === "Location" ? "noopener noreferrer" : undefined}
+                  rel={
+                    item.title === "Location"
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="flex items-center space-x-6 group"
                 >
                   <div className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
@@ -135,7 +143,10 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-slate-300">
+                    <label
+                      htmlFor="name"
+                      className="block mb-2 text-sm font-medium text-slate-300"
+                    >
                       Your Name
                     </label>
                     <Input
@@ -149,7 +160,10 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-slate-300">
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-slate-300"
+                    >
                       Your Email
                     </label>
                     <Input
@@ -164,7 +178,10 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block mb-2 text-sm font-medium text-slate-300">
+                    <label
+                      htmlFor="subject"
+                      className="block mb-2 text-sm font-medium text-slate-300"
+                    >
                       Subject
                     </label>
                     <Input
@@ -178,7 +195,10 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-slate-300">
+                    <label
+                      htmlFor="message"
+                      className="block mb-2 text-sm font-medium text-slate-300"
+                    >
                       Message
                     </label>
                     <Textarea

@@ -4,15 +4,9 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"
+      className="relative py-24 text-white border-t border-slate-700/50"
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
           About Me
         </h2>
@@ -44,8 +38,8 @@ const About: React.FC = () => {
           </p>
           <p>
             I value continuous learning, clear communication, and collaboration,
-            and I enjoy turning complex requirements into efficient, maintainable
-            solutions that create real impact.
+            and I enjoy turning complex requirements into efficient,
+            maintainable solutions that create real impact.
           </p>
         </div>
       </div>
