@@ -4,7 +4,7 @@ const ChatButton = () => {
   return (
     <div className="fixed bottom-8 right-8 z-[100] flex items-center gap-3">
       <a
-        href="https://wa.me/971543431993?text=Hello%20SefarAi%20team%2C%20I'm%20interested%20in%20your%20AI%20solutions."
+        href="https://wa.me/971543431993?text=Hello%20Yahia%2C%20I%E2%80%99d%20like%20to%20learn%20more%20about%20your%20portfolio%20projects."
         target="_blank"
         rel="noopener noreferrer"
         className="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:shadow-[0_15px_40px_rgba(37,211,102,0.6)] transition-shadow group"

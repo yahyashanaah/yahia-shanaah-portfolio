@@ -4,7 +4,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import ChatButton from "@/components/ChatButton"; // ✅ Use uppercase
+import ChatButton from "@/components/ChatButton"; // ✅ Import the ChatButton component
+
 
 const queryClient = new QueryClient();
 
