@@ -78,8 +78,8 @@ const Hero: React.FC = () => {
     },
     {
       name: "Resume",
-      href: "/Yayah-shanaah-Resume.pdf",
-      download: "Yayah-Shanaah-Resume.pdf",
+      href: "/Yayah-shanaah-cv.pdf",
+      download: "Yayah-Shanaah-CV.pdf",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -258,8 +258,8 @@ const Hero: React.FC = () => {
                               {link.name === "Email"
                                 ? "send email"
                                 : link.name === "Resume"
-                                ? "download"
-                                : "visit"}
+                                  ? "download"
+                                  : "visit"}
                             </span>
                           </div>
 
